@@ -12,6 +12,10 @@ Patients with historical MR data, search for hospital numbers:
 * 1869032
 * 1897143
 
+Patients with historical glaucoma data, search for hospital numbers:
+
+* 1009797
+
 Surgeons with cataract audit data, login as users:
 
 * williamss (453)
