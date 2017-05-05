@@ -16,6 +16,9 @@ Patients with historical glaucoma data, search for hospital numbers:
 
 * 1009797
 
+Clean patients:
+* 1008006
+
 Surgeons with cataract audit data, login as users:
 
 * williamss (453)
