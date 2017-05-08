@@ -20,6 +20,15 @@ Clean patients:
 * 1008006
 * 1008007
 
+Patients with sample Biometry DICOM files:
+* 1009604
+* 1009605
+* 1008003
+* 1009412
+* 1009411
+* 1007942
+* 1009402
+
 Surgeons with cataract audit data, login as users:
 
 * williamss (453)
