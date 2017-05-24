@@ -23,3 +23,6 @@ Surgeons with cataract audit data, login as users:
 
 Password for both users is "password".
 
+Administration Access:
+* User: admin
+* Password: admin
