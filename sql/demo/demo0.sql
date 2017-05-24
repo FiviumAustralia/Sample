@@ -1,3 +1,10 @@
+/***********************************************************************
+* OpenEyes Demo Loader file
+************************************************************************
+* This file creates perpetual 'automatic' worklists for all contexts,
+* containing patients used for demontration
+************************************************************************/
+
 /* Create worklist Definitions */
 INSERT INTO `worklist_definition` (`id`,`name`,`description`,`worklist_name`,`rrule`,`start_time`,`end_time`,`active_from`,`active_until`,`scheduled`,`display_order`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`) VALUES (1,'Cataract Demo Patients','Patients for cataract demos',NULL,'FREQ=DAILY','08:00:00','17:00:00','2099-05-09 11:45:14',NULL,0,0,1,'2017-05-09 11:45:14',1,'2017-05-09 11:45:14');
 INSERT INTO `worklist_definition` (`id`,`name`,`description`,`worklist_name`,`rrule`,`start_time`,`end_time`,`active_from`,`active_until`,`scheduled`,`display_order`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`) VALUES (2,'Medical Retina Demo Patients','Patients for MR demos',NULL,'FREQ=DAILY','08:00:00','17:00:00','2099-05-09 11:45:48',NULL,0,0,1,'2017-05-09 11:45:48',1,'2017-05-09 11:45:48');
@@ -11,7 +18,7 @@ INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`las
 INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (4,'Blank Demo Patients','Empty patient records for demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:59:10',1,'2017-05-09 12:59:10',3);
 
 /* Add Cataract Patients */
-Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 1, id from patient p where p.hos_num 
+Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 1, id from patient p where p.hos_num
 	in (
     '1009604',
 	'1009605',
@@ -22,11 +29,11 @@ Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 1, id fro
 	'1009402'
     );
 
-/* Add MR Patients */    
-Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 2, id from patient p where p.hos_num 
+/* Add MR Patients */
+Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 2, id from patient p where p.hos_num
 	in (
-    '1140873', 
-    '1152572', 
+    '1140873',
+    '1152572',
     '1776515',
 	'1796962',
 	'1835099',
@@ -35,14 +42,14 @@ Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 2, id fro
 	'1897143'
     );
 
-/* Add Glaucoma patients */    
-Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 3, id from patient p where p.hos_num 
+/* Add Glaucoma patients */
+Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 3, id from patient p where p.hos_num
 	in (
     '1009797'
     );
 
-/* Add Empty patients */    
-Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 4, id from patient p where p.hos_num 
+/* Add Empty patients */
+Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 4, id from patient p where p.hos_num
 	in (
     '1008006',
     '1008007'
