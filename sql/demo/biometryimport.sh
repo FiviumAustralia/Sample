@@ -14,7 +14,7 @@ fi
 cd test
 git pull
 
-cp *.dcm ../incomming
-cp Archive/*.dcm ../incomming
+cp *.dcm ../incoming
+cp Archive/*.dcm ../incoming
 
 cd "$dir"
