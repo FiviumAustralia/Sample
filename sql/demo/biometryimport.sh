@@ -6,7 +6,11 @@ cd /home/iolmaster
 rm -rf incoming
 mkdir incoming
 
-cd test
+if [ ! -d ".git" ]; then
+    mkdir "test"
+fi
+
+cd "test"
 
 if [ ! -d ".git" ]; then
     echo "Cloning sample dicom files"
