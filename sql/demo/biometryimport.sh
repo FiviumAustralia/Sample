@@ -6,7 +6,7 @@ cd /home/iolmaster
 rm -rf incoming
 mkdir incoming
 
-if [ ! -d ".git" ]; then
+if [ ! -d "test" ]; then
     mkdir "test"
 fi
 
