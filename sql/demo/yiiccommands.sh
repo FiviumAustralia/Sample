@@ -2,7 +2,7 @@
 dir=$PWD
 cd /var/www/openeyes/protected
 
-bash yiic generateuniquecode
-bash yiic generatesessions
+yiic generateuniquecode
+yiic generatesessions
 
 cd "$dir"
