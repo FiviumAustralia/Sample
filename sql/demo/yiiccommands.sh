@@ -1,11 +1,12 @@
 #!/bin/bash
 dir=$PWD
+
 cd /var/www/openeyes/protected
 
 echo "Generating Unique Codes..."
-./yiic generateuniquecode --interactive=0
+./yiic generateuniquecode
 
 echo "Generating Operation Booking Sessions"
-./yiic generatesessions --interactive=0
+./yiic generatesessions
 
 cd "$dir"
