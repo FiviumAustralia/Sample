@@ -2,7 +2,10 @@
 dir=$PWD
 cd /var/www/openeyes/protected
 
-yiic generateuniquecode
-yiic generatesessions
+echo "Generating Unique Codes..."
+./yiic generateuniquecode --interactive=0
+
+echo "Generating Operation Booking Sessions"
+./yiic generatesessions --interactive=0
 
 cd "$dir"
