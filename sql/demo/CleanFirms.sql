@@ -1,5 +1,7 @@
 use openeyes;
 
+delete from audit;
+
 update episode
     set firm_id = 2
     Where firm_id in (select id from firm where service_subspecialty_assignment_id = 1) and firm_id != 1;
@@ -84,3 +86,4 @@ UPDATE `firm` SET `name`='Michael Morgan', `consultant_id`='6006' WHERE `id`='28
 UPDATE `firm` SET `name`='Michael Morgan', `consultant_id`='6006' WHERE `id`='61';
 UPDATE `firm` SET `name`='Michael Morgan', `consultant_id`='6006' WHERE `id`='215';
 UPDATE `firm` SET `name`='Sandra Williams', `consultant_id`='453' WHERE `id`='233';
+UPDATE `firm` SET `name`='Paul Godinho', `consultant_id`='11' WHERE `id`='1';
