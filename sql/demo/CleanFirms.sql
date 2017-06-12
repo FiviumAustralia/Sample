@@ -87,3 +87,5 @@ UPDATE `firm` SET `name`='Michael Morgan', `consultant_id`='6006' WHERE `id`='61
 UPDATE `firm` SET `name`='Michael Morgan', `consultant_id`='6006' WHERE `id`='215';
 UPDATE `firm` SET `name`='Sandra Williams', `consultant_id`='453' WHERE `id`='233';
 UPDATE `firm` SET `name`='Paul Godinho', `consultant_id`='11' WHERE `id`='1';
+
+UPDATE user set last_firm_id = 5;
