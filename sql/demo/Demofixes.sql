@@ -15,3 +15,6 @@ INSERT INTO `et_ophciexamination_overallmanagementplan` (`event_id`, `left_targe
 INSERT INTO `address` (`address1`, `city`, `postcode`, `county`, `country_id`, `contact_id`) VALUES ('1 The street', 'Townsville', 'TW1 1NN', 'Essex', '1', '9489');
 INSERT INTO `address` (`address1`, `address2`, `city`, `postcode`, `county`, `country_id`, `contact_id`) VALUES ('River Cottage', '123 The lane', 'Hull', 'HU1 1LL', 'Berkshire', '1', '8031');
 INSERT INTO `address` (`address1`, `city`, `postcode`, `county`, `country_id`, `contact_id`) VALUES ('74 Brommels Road', 'London', 'SW4 1AB', 'London', '1', '8092');
+INSERT INTO `address` (`address1`, `city`, `postcode`, `county`, `country_id`, `contact_id`) VALUES ('24 Peticoat Lane', 'London', 'EC2 1QQ', 'London', '1', '9498');
+INSERT INTO `address` (`address1`, `city`, `postcode`, `county`, `country_id`, `contact_id`) VALUES ('1 The street', 'Townsville', 'TW1 1NN', 'Essex', '1', '9499');
+INSERT INTO `address` (`address1`, `city`, `country_id`, `contact_id`) VALUES ('The North Pole', 'Lapland', '76', '8095');
