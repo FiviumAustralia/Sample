@@ -45,7 +45,8 @@ Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 2, id fro
 /* Add Glaucoma patients */
 Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 3, id from patient p where p.hos_num
 	in (
-    '1009797'
+    '1009797',
+	'0755231'
     );
 
 /* Add Empty patients */
