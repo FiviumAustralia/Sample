@@ -112,6 +112,12 @@ UPDATE `firm` SET `name`='Refractive Service' WHERE `id`='14';
 UPDATE `firm` SET `name`='Strabismus Service' WHERE `id`='15';
 UPDATE `firm` SET `name`='Uveitis Service' WHERE `id`='16';
 UPDATE `firm` SET `name`='Vitreoretinal Service' WHERE `id`='17';
+UPDATE `firm` SET `runtime_selectable`='0' WHERE `id`='5';
+UPDATE `firm` SET `runtime_selectable`='0' WHERE `id`='8';
+UPDATE `firm` SET `runtime_selectable`='0' WHERE `id`='9';
+UPDATE `firm` SET `can_own_an_episode`='0' WHERE `id`='1';
+INSERT INTO `firm` (`service_subspecialty_assignment_id`, `name`, `active`, `can_own_an_episode`, `runtime_selectable`) VALUES ('9', 'Community Eye Care', '1', '1', '0');
+
 
 
 UPDATE user set last_firm_id = 5;
