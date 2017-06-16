@@ -1,6 +1,5 @@
 use openeyes;
 
-delete from audit;
 
 update episode
     set firm_id = 2
@@ -76,6 +75,9 @@ DELETE FROM ophcocorrespondence_firm_site_secretary where firm_id > 17;
 DELETE FROM referral;
 
 DELETE FROM patientticketing_ticketqueue_assignment;
+
+DELETE FROM firm_version;
+
 
 -- Delete remaining firms
 DELETE FROM firm WHERE id not in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 5, 28, 61, 215, 233, 256);
