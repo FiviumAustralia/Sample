@@ -88,4 +88,28 @@ UPDATE `firm` SET `name`='George Jones', `consultant_id`='3' WHERE `id`='215';
 UPDATE `firm` SET `name`='Sandra Williams', `consultant_id`='453' WHERE `id`='233';
 UPDATE `firm` SET `name`='Paul Godinho', `consultant_id`='11' WHERE `id`='1';
 
+-- Change service firms for new style event dialog
+UPDATE `firm` SET `can_own_an_episode`='0' WHERE `id`='256';
+UPDATE `firm` SET `can_own_an_episode`='0' WHERE `id`='233';
+UPDATE `firm` SET `can_own_an_episode`='0' WHERE `id`='215';
+UPDATE `firm` SET `can_own_an_episode`='0' WHERE `id`='61';
+UPDATE `firm` SET `can_own_an_episode`='0' WHERE `id`='28';
+UPDATE `firm` SET `name`='Accident & Emergency Service' WHERE `id`='2';
+UPDATE `firm` SET `name`='Adnexal Service' WHERE `id`='3';
+UPDATE `firm` SET `name`='Anaesthetics Service' WHERE `id`='4';
+UPDATE `firm` SET `name`='Cataract Service' WHERE `id`='5';
+UPDATE `firm` SET `name`='Cornea Service' WHERE `id`='6';
+UPDATE `firm` SET `name`='External Service' WHERE `id`='7';
+UPDATE `firm` SET `name`='Glaucoma Service' WHERE `id`='8';
+UPDATE `firm` SET `name`='Medical Retinal Service' WHERE `id`='9';
+UPDATE `firm` SET `name`='Neuro-ophthalmology Service' WHERE `id`='10';
+UPDATE `firm` SET `name`='Oncology Service' WHERE `id`='11';
+UPDATE `firm` SET `name`='Paediatrics Service' WHERE `id`='12';
+UPDATE `firm` SET `name`='General Ophthalmology Service' WHERE `id`='13';
+UPDATE `firm` SET `name`='Refractive Service' WHERE `id`='14';
+UPDATE `firm` SET `name`='Strabismus Service' WHERE `id`='15';
+UPDATE `firm` SET `name`='Uveitis Service' WHERE `id`='16';
+UPDATE `firm` SET `name`='Vitreoretinal Service' WHERE `id`='17';
+
+
 UPDATE user set last_firm_id = 5;
