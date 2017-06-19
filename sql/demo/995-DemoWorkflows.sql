@@ -18,3 +18,13 @@ INSERT INTO `ophciexamination_element_set_item` (`id`,`set_id`,`element_type_id`
 INSERT INTO `ophciexamination_element_set_item` (`id`,`set_id`,`element_type_id`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`is_hidden`,`is_mandatory`) VALUES (125,1,313,1,'2017-05-09 15:13:21',1,'2017-05-09 15:13:21',0,0);
 INSERT INTO `ophciexamination_element_set_item` (`id`,`set_id`,`element_type_id`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`is_hidden`,`is_mandatory`) VALUES (127,1,412,1,'2017-05-09 15:13:37',1,'2017-05-09 15:13:37',0,0);
 INSERT INTO `ophciexamination_element_set_item` (`id`,`set_id`,`element_type_id`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`is_hidden`,`is_mandatory`) VALUES (128,1,431,1,'2017-05-09 15:14:54',1,'2017-05-09 15:14:54',0,0);
+
+
+DELETE FROM ophciexamination_event_elementset_assignment WHERE step_id IN (SELECT id FROM ophciexamination_element_set WHERE workflow_id IN (4, 10, 11));
+
+DELETE FROM ophciexamination_element_set_item WHERE set_id IN (SELECT id FROM ophciexamination_element_set WHERE workflow_id IN (4, 10, 11));
+
+DELETE FROM ophciexamination_element_set
+WHERE workflow_id IN (4, 10, 11);
+
+DELETE FROM ophciexamination_workflow WHERE id IN (4, 10, 11);
