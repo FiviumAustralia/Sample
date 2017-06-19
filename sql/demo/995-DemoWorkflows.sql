@@ -21,10 +21,13 @@ INSERT INTO `ophciexamination_element_set_item` (`id`,`set_id`,`element_type_id`
 
 
 DELETE FROM ophciexamination_event_elementset_assignment WHERE step_id IN (SELECT id FROM ophciexamination_element_set WHERE workflow_id IN (4, 10, 11));
+DELETE FROM ophciexamination_event_elementset_assignment_version;
 
 DELETE FROM ophciexamination_element_set_item WHERE set_id IN (SELECT id FROM ophciexamination_element_set WHERE workflow_id IN (4, 10, 11));
+DELETE FROM ophciexamination_element_set_item_version;
 
-DELETE FROM ophciexamination_element_set
-WHERE workflow_id IN (4, 10, 11);
+DELETE FROM ophciexamination_element_set WHERE workflow_id IN (4, 10, 11);
+DELETE FROM ophciexamination_element_set_version;
 
 DELETE FROM ophciexamination_workflow WHERE id IN (4, 10, 11);
+DELETE FROM ophciexamination_workflow_version;
