@@ -57,3 +57,12 @@ UPDATE `contact` SET `nick_name`=NULL, `title`='Dr', `first_name`='Simon', `last
 UPDATE `contact` SET `nick_name`=NULL WHERE `id`='247804';
 
 UPDATE contact SET nick_name = NULL WHERE id not in (SELECT contact_id from user);
+
+-- Add laser operators
+INSERT INTO `ophtrlaser_laser_operator` (`user_id`) VALUES ('2');
+INSERT INTO `ophtrlaser_laser_operator` (`user_id`) VALUES ('3');
+INSERT INTO `ophtrlaser_laser_operator` (`user_id`) VALUES ('6006');
+
+-- Add more injection users
+INSERT INTO `ophtrintravitinjection_injectionuser` (`user_id`) VALUES ('6006');
+INSERT INTO `ophtrintravitinjection_injectionuser` (`user_id`) VALUES ('2');
