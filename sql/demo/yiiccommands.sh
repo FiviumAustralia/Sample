@@ -10,3 +10,4 @@ echo "Generating Operation Booking Sessions"
 ./yiic generatesessions
 
 cd "$dir"
+ 
