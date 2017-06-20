@@ -112,7 +112,7 @@ UPDATE `et_ophtroperationnote_site_theatre` SET `theatre_id`='2' WHERE `id`='289
 -- Rename theatres and assign to sites
 UPDATE `ophtroperationbooking_operation_theatre` SET `name`='Ophthalmology Theatre', `site_id`='3' WHERE `id`='3';
 UPDATE `ophtroperationbooking_operation_theatre` SET `name`='Theatre 1', `site_id`='4' WHERE `id`='4';
-DELETE FROM `ophtroperationbooking_operation_theatre_version`
+DELETE FROM `ophtroperationbooking_operation_theatre_version`;
 
 -- Clean up and remove extra theatres
 UPDATE ophtroperationbooking_operation_session SET theatre_id = 2 where theatre_id not in (1, 2, 3, 4) and theatre_id > 10;
@@ -120,6 +120,8 @@ UPDATE ophtroperationbooking_operation_session SET theatre_id = 3 where theatre_
 UPDATE ophtroperationbooking_operation_session SET theatre_id = 4 where theatre_id not in (1, 2, 3, 4) and theatre_id > 6;
 UPDATE ophtroperationbooking_operation_session SET theatre_id = 1 where theatre_id not in (1, 2, 3, 4);
 UPDATE ophtroperationbooking_operation_booking b INNER JOIN ophtroperationbooking_operation_session s ON s.id=b.session_id SET b.session_theatre_id = s.theatre_id;
+UPDATE ophtroperationbooking_admission_letter_warning_rule SET theatre_id = 1 WHERE theatre_id IS NOT NULL;
+UPDATE ophtroperationbooking_letter_contact_rule SET theatre_id = 1 WHERE theatre_id IS NOT NULL;
 UPDATE `ophtroperationbooking_admission_letter_warning_rule` SET `warning_text`='please telephone 020 7123 4567 and ask to speak to a nurse for advice' WHERE `id`='25';
 UPDATE `ophtroperationbooking_admission_letter_warning_rule` SET `warning_text`='please telephone 020 8123 1234 and ask to speak to a nurse for advice' WHERE `id`='26';
 UPDATE `ophtroperationbooking_admission_letter_warning_rule` SET `warning_text`='Please contact the Children\'s Ward as soon as possible on 0207 123 1234 to discuss pre-operative instructions' WHERE `id`='11';
