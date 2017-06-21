@@ -49,3 +49,15 @@ UPDATE user set last_firm_id = 5;
 INSERT INTO `genetics_study` (`name`, `criteria`) VALUES ('Demo Study', 'Anybody can join this study. It is for demonstration purposes only');
 INSERT INTO `genetics_study_proposer` (`study_id`, `user_id`) SELECT 1, (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='User');
 INSERT INTO `genetics_study_proposer` (`study_id`, `user_id`) SELECT 1, (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Clinical');
+
+-- Amino Acido C type
+INSERT INTO `pedigree_amino_acid_change_type` (`change`) VALUES ('Demo Amino Acid Change Type');
+
+-- Base Change Type
+INSERT INTO `pedigree_base_change_type` (`change`) VALUES ('Demo Base Change Type');
+
+-- Gene
+INSERT INTO `pedigree_gene` (`name`, `location`, `description`, `details`) VALUES ('Demo Gene', '23', 'Gene placeholder for demonstration', 'Demonstraition');
+
+-- Pedigree/family
+INSERT INTO `pedigree` (`id`,`inheritance_id`,`comments`,`consanguinity`,`gene_id`,`base_change`,`amino_acid_change`,`disorder_id`,`last_modified_date`,`last_modified_user_id`,`created_user_id`,`created_date`,`base_change_id`,`amino_acid_change_id`,`genomic_coordinate`,`genome_version`,`gene_transcript`) VALUES (1,1,'This is a demonstration pedegree',0,1,'','',NULL,'2017-06-21 17:05:53',1,1,'2017-06-21 17:05:53',1,1,'',37,'');
