@@ -18,3 +18,6 @@ INSERT INTO `address` (`address1`, `city`, `postcode`, `county`, `country_id`, `
 INSERT INTO `address` (`address1`, `city`, `postcode`, `county`, `country_id`, `contact_id`) VALUES ('24 Peticoat Lane', 'London', 'EC2 1QQ', 'London', '1', '9498');
 INSERT INTO `address` (`address1`, `city`, `postcode`, `county`, `country_id`, `contact_id`) VALUES ('1 The street', 'Townsville', 'TW1 1NN', 'Essex', '1', '9499');
 INSERT INTO `address` (`address1`, `city`, `country_id`, `contact_id`) VALUES ('The North Pole', 'Lapland', '76', '8095');
+
+-- Add all user roles to admin user
+INSERT INTO authassignment (itemname, userid) SELECT name, 1 FROM openeyes.authitem where type=2 AND name not in (SELECT itemname from authassignment where userid=1) AND name != 'API access';
