@@ -66,3 +66,7 @@ INSERT INTO `ophtrlaser_laser_operator` (`user_id`) VALUES ('6006');
 -- Add more injection users
 INSERT INTO `ophtrintravitinjection_injectionuser` (`user_id`) VALUES ('6006');
 INSERT INTO `ophtrintravitinjection_injectionuser` (`user_id`) VALUES ('2');
+
+
+-- Clean contact Version
+DELETE FROM contact_version;
