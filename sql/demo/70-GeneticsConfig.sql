@@ -23,24 +23,29 @@ INSERT INTO `user` (`username`, `first_name`, `last_name`, `active`, `global_fir
 SELECT 'geneticsuser', 'Genetics', 'User', '1', '1', '', 'b0c6e884403a5c05bd634943df1b9a08', '7jMG6UQ2dY', '1', (SELECT id from contact c WHERE c.first_name = 'Genetics' AND c.last_name = 'User');
 
 -- Set permissions
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'Genetics Clinical', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Clinical');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'User', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Clinical');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'View clinical', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Clinical');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'Edit', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Clinical');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'Genetics Clinical', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Clinical');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'User', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Clinical');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'View clinical', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Clinical');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'Edit', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Clinical');
 
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'Genetics Admin', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Administrator');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'User', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Administrator');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'View clinical', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Administrator');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'Edit', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Administrator');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'Genetics Admin', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Administrator');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'User', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Administrator');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'View clinical', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Administrator');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'Edit', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Administrator');
 
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'Genetics Laboratory Technician', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Lab Tech');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'User', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Lab Tech');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'View clinical', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Lab Tech');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'Edit', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Lab Tech');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'Genetics Laboratory Technician', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Lab Tech');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'User', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Lab Tech');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'View clinical', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Lab Tech');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'Edit', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Lab Tech');
 
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'Genetics User', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='User');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'User', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='User');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'View clinical', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='User');
-INSERT INTO `openeyes`.`authassignment` (`itemname`, `userid`) SELECT'Edit', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='User');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'Genetics User', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='User');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'User', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='User');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'View clinical', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='User');
+INSERT INTO `authassignment` (`itemname`, `userid`) SELECT'Edit', (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='User');
 
 UPDATE user set last_firm_id = 5;
+
+-- Create study
+INSERT INTO `genetics_study` (`name`, `criteria`) VALUES ('Demo Study', 'Anybody can join this study. It is for demonstration purposes only');
+INSERT INTO `genetics_study_proposer` (`study_id`, `user_id`) SELECT 1, (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='User');
+INSERT INTO `genetics_study_proposer` (`study_id`, `user_id`) SELECT 1, (SELECT id FROM user WHERE first_name = 'Genetics' AND last_name='Clinical');
