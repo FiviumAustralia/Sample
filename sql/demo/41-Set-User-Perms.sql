@@ -5,7 +5,7 @@ INSERT INTO authassignment (itemname, userid) SELECT name, 1 FROM openeyes.authi
 
 
 -- Add contacts for new users
-INSERT INTO `contact` (`title`, `first_name`, `last_name`) VALUES ('Mr', 'Genetics', 'User');
+INSERT INTO `contact` (`title`, `first_name`, `last_name`) VALUES ('Mrs', 'CVI', 'Clerical');
 
 -- Create new users
 INSERT INTO `user` (`username`, `first_name`, `last_name`, `active`, `global_firm_rights`, `role`, `password`, `salt`, `is_clinical`, `contact_id`)
