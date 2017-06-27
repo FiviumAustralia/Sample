@@ -48,7 +48,7 @@ DELETE FROM site WHERE id > 4;
 -- Rename sites
 UPDATE `site` SET `name`='Kings Hospital', `short_name`='Kings', `telephone`='0123456789' WHERE `id`='1';
 UPDATE `site` SET `name`='Queens Hospital', `remote_id`='BBBB', `short_name`='Queens', `fax`='020 876 3252', `telephone`='020 234 5678' WHERE `id`='3';
-UPDATE `site` SET `name`='Princess Hospital', `remote_id`='CCCC', `short_name`='Princess', `fax`=' 020 242 8888', `telephone`='0203 777 4321/4028' WHERE `id`='4';
+UPDATE `site` SET `name`='Princess Hospital', `remote_id`='CCCC', `short_name`='Princess', `fax`='020 242 8888', `telephone`='0203 777 4321/4028' WHERE `id`='4';
 
 -- Update addresses
 UPDATE `address` SET `address1`='100 Main Road', `city`='London', `postcode`='W1 1AA' WHERE `id`='1';
@@ -58,3 +58,8 @@ UPDATE `address` SET `address1`='210 Uxbridge Road', `postcode`='BR3 3AB' WHERE 
 UPDATE `contact` SET `nick_name`='Post in at Kings', `first_name`='Greg', `last_name`='Jones' WHERE `id`='113059';
 UPDATE `contact` SET `last_name`='Simpson' WHERE `id`='278379';
 UPDATE `contact` SET `qualifications`='System administrator' WHERE `id`='1';
+
+-- Add a new empty site
+UPDATE `contact` SET `nick_name`='', `primary_phone`='040 203 1234', `title`='', `first_name`='Elizabeth', `last_name`='Hospital', `contact_label_id`=NULL WHERE `id`='90';
+INSERT INTO `address` (`address1`, `city`, `postcode`, `county`, `country_id`, `contact_id`) VALUES ('21 Empress Drive', 'London', 'SW1 1JW', 'London', '1', '90');
+INSERT INTO `site` (`name`, `remote_id`, `short_name`, `telephone`, `contact_id`) VALUES ('The Elizabeth Hospital', 'DDDD', 'Elizabeth', '0402 344 566', '90');
