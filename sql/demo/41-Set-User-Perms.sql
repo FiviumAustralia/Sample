@@ -20,4 +20,4 @@ INSERT INTO authassignment (itemname, userid) VALUES ('Patient Tickets', 6006);
 INSERT INTO authassignment (itemname, userid) VALUES ('Patient Tickets admin', 6006);
 
 
-UPDATE user set last_firm_id = 5;
+UPDATE user set last_firm_id = 297;

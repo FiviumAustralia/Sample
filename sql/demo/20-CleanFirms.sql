@@ -117,7 +117,4 @@ UPDATE `firm` SET `runtime_selectable`='0' WHERE `id`='8';
 UPDATE `firm` SET `runtime_selectable`='0' WHERE `id`='9';
 UPDATE `firm` SET `can_own_an_episode`='0' WHERE `id`='1';
 INSERT INTO `firm` (`service_subspecialty_assignment_id`, `name`, `active`, `can_own_an_episode`, `runtime_selectable`) VALUES ('9', 'Community Eye Care', '1', '1', '0');
-
-
-
-UPDATE user set last_firm_id = 5;
+INSERT INTO `firm` (`service_subspecialty_assignment_id`, `name`, `active`, `can_own_an_episode`, `runtime_selectable`) VALUES ('5', 'New Patients', '1', '0', '1');
