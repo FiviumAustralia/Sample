@@ -37,5 +37,5 @@ INSERT INTO `family_history` (`patient_id`, `relative_id`, `side_id`, `condition
 --
 INSERT INTO `socialhistory` (`patient_id`, `occupation_id`, `smoking_status_id`, `accommodation_id`, `comments`, `carer_id`, `alcohol_intake`, `substance_misuse_id`)
 VALUES ('1990875', '1', '1', '1', 'Sheltered accommodation - Carer visits twice daily', '1', '31', '1');
-INSERT INTO `socialhistory` (`patient_id`, `smoking_status_id`, `accommodation_id`, `comments`, `carer_id`)
-VALUES ('1935214', '1', '1', 'Sheltered accommodation - Carer visits twice daily', '1' );
+INSERT INTO `socialhistory` (`patient_id`, `smoking_status_id`, `accommodation_id`, `carer_id`)
+VALUES ('1935214', '1', '2', '1' );
