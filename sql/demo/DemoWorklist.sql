@@ -15,7 +15,8 @@ INSERT INTO `worklist_definition` (`id`,`name`,`description`,`worklist_name`,`rr
 INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (1,'Cataract Demo Patients','Patients for cataract demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:58:42',1,'2017-05-09 12:58:42',1);
 INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (2,'Medical Retina Demo Patients','Patients for MR demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:59:08',1,'2017-05-09 12:59:08',2);
 INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (3,'Glaucoma Demo Patients','Patients for Glaucoma demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:59:10',1,'2017-05-09 12:59:10',3);
-INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (4,'Blank Demo Patients','Empty patient records for demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:59:10',1,'2017-05-09 12:59:10',3);
+INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (4,'Blank Demo Patients','Empty patient records for demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:59:10',1,'2017-05-09 12:59:10',4);
+INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (5,'Vitreoretinal Demo Patients','Patients for Vitreoretinal demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:59:10',1,'2017-05-09 12:59:10',5);
 
 /* Add Cataract Patients */
 Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 1, id from patient p where p.hos_num
@@ -54,4 +55,10 @@ Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 4, id fro
 	in (
     '1008006',
     '1008007'
+    );
+
+/* Add VR patients */
+	Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 5, id from patient p where p.hos_num
+	in (
+    '1932578'
     );
