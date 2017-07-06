@@ -14,6 +14,7 @@ cp modules/OphInVisualfields/tests/fields/legacy/* runtime/fields/legacy/
 
 ./yiic importlegacyvf import --importDir=runtime/fields/legacy --archiveDir=runtime/fields/out --errorDir=runtime/fields/err --dupDir=runtime/fields/dups
 
-chmod -R a+rw files
+chown -R www-data:www-data files
+chmod -R 774 files
 
 cd "$dir"
