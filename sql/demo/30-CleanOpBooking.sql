@@ -48,6 +48,30 @@ UPDATE `ophtroperationbooking_operation_sequence` SET `theatre_id`='2' WHERE `id
 UPDATE `ophtroperationbooking_operation_sequence` SET `theatre_id`='3' WHERE `id`='19';
 UPDATE `ophtroperationbooking_operation_sequence` SET `theatre_id`='4' WHERE `id`='20';
 
+-- distribute sequenses between firms
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='1' WHERE `id`='1';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='5' WHERE `id`='2';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='3' WHERE `id`='3';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='256' WHERE `id`='4';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='215' WHERE `id`='5';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='6' WHERE `id`='6';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='7' WHERE `id`='7';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='8' WHERE `id`='8';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='9' WHERE `id`='9';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='10' WHERE `id`='10';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='11' WHERE `id`='11';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='12' WHERE `id`='12';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='13' WHERE `id`='13';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='14' WHERE `id`='14';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='15' WHERE `id`='15';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='16' WHERE `id`='16';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='17' WHERE `id`='17';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='28' WHERE `id`='18';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='61' WHERE `id`='19';
+UPDATE `ophtroperationbooking_operation_sequence` SET `firm_id`='233' WHERE `id`='20';
+
+
+
 -- distribute operations between sites and theatres
 UPDATE `et_ophtroperationnote_site_theatre` SET `site_id`='1', `theatre_id`='1' WHERE `id`='1';
 UPDATE `et_ophtroperationnote_site_theatre` SET `site_id`='3', `theatre_id`='2' WHERE `id`='2';
@@ -133,24 +157,41 @@ UPDATE `ophtroperationbooking_letter_contact_rule` SET `health_telephone`='020 1
 UPDATE `ophtroperationbooking_letter_contact_rule` SET `health_telephone`='0207 123 1234 and ask to speak to a nurse' WHERE `id`='11';
 UPDATE `ophtroperationbooking_letter_contact_rule` SET `health_telephone`='020 8123 1234' WHERE `id`='16';
 UPDATE ophtroperationbooking_letter_contact_rule SET refuse_telephone = '01234 567 890';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='4';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='31';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='18';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='12';
-UPDATE `openeyes`.`ophtroperationbooking_letter_contact_rule` SET `firm_id`='3' WHERE `id`='2';
-UPDATE `openeyes`.`ophtroperationbooking_letter_contact_rule` SET `firm_id`='5' WHERE `id`='3';
-UPDATE `openeyes`.`ophtroperationbooking_letter_contact_rule` SET `firm_id`='7' WHERE `id`='6';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='15';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='29';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='16';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='17';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='19';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='20';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='21';
-UPDATE `openeyes`.`ophtroperationbooking_letter_contact_rule` SET `site_id`='3' WHERE `id`='22';
-UPDATE `openeyes`.`ophtroperationbooking_letter_contact_rule` SET `site_id`='4' WHERE `id`='26';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='30';
-DELETE FROM `openeyes`.`ophtroperationbooking_letter_contact_rule` WHERE `id`='32';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='4';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='31';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='18';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='12';
+UPDATE `ophtroperationbooking_letter_contact_rule` SET `firm_id`='3' WHERE `id`='2';
+UPDATE `ophtroperationbooking_letter_contact_rule` SET `firm_id`='5' WHERE `id`='3';
+UPDATE `ophtroperationbooking_letter_contact_rule` SET `firm_id`='7' WHERE `id`='6';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='15';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='29';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='16';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='17';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='19';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='20';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='21';
+UPDATE `ophtroperationbooking_letter_contact_rule` SET `site_id`='3' WHERE `id`='22';
+UPDATE `ophtroperationbooking_letter_contact_rule` SET `site_id`='4' WHERE `id`='26';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='30';
+DELETE FROM `ophtroperationbooking_letter_contact_rule` WHERE `id`='32';
 DELETE FROM ophtroperationbooking_operation_name_rule;
 
 DELETE FROM ophtroperationbooking_operation_theatre WHERE id > 4;
+
+-- ****** Clean Wards ***********
+
+-- reduce number of used wards by replace ward_id > 7
+UPDATE ophtroperationbooking_operation_booking SET ward_id = 4 WHERE ward_id > 7;
+
+DELETE w FROM ophtroperationbooking_operation_ward w
+LEFT JOIN ophtroperationbooking_operation_booking o on o.ward_id = w.id
+WHERE o.ward_id IS NULL;
+
+-- Rename wards
+UPDATE `ophtroperationbooking_operation_ward` SET `name`='Ward A', `long_name`='Kings Ward A', `code`='KWA', `restriction`='9' WHERE `id`='1';
+UPDATE `ophtroperationbooking_operation_ward` SET `name`='Ward B', `long_name`='Kings Ward B', `code`='KWB', `restriction`='10' WHERE `id`='2';
+UPDATE `ophtroperationbooking_operation_ward` SET `site_id`='3', `name`='Ward A', `long_name`='Ophthalmology ward A', `directions`='Follow signs to Ophthalmology day surgery', `code`='OB', `restriction`='0' WHERE `id`='4';
+UPDATE `ophtroperationbooking_operation_ward` SET `site_id`='4', `name`='Nancy Fenwick', `code`='NFW', `restriction`='0' WHERE `id`='6';
+UPDATE `ophtroperationbooking_operation_ward` SET `site_id`='3', `name`='Ward B', `long_name`='Ophthalmology ward B', `directions`='Follow signs to Ophthalmology day surgery', `restriction`='10', `code`='KPW1' WHERE `id`='7';
+UPDATE `ophtroperationbooking_operation_ward` SET `site_id`='1', `name`='Paediatrics Ward', `long_name`='Jubille Childrens\' Centre Ophthalmology Ward', `directions`='Go to Jubilee Children\'s centre reception', `code`='KPW1', `restriction`='4' WHERE `id`='3';
