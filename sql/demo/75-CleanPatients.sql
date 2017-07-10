@@ -23,7 +23,7 @@ UPDATE `contact` SET `title`='Miss', `first_name`='Marilyn', `last_name`='Monroe
 UPDATE `contact` SET `title`='Miss', `first_name`='Anne', `last_name`='Frank' WHERE `id`='378007';
 UPDATE `contact` SET `title` = 'HRH', `first_name`='Catherine', `last_name`='Duchess of Cambridge', `maiden_name` = 'Middleton' WHERE `id`='8093';
 
-UPDATE `contact` SET `first_name`='Wolfgang', `last_name`='Mozart' WHERE `id`='9087';
+UPDATE `contact` SET `first_name`='Wolfgang Amadeus', `last_name`='Mozart' WHERE `id`='9087';
 UPDATE `contact` SET `first_name`='Ulysses', `last_name`='Grant' WHERE `id`='9088';
 UPDATE `contact` SET `first_name`='Ronald', `last_name`='Reagan' WHERE `id`='9089';
 UPDATE `contact` SET `first_name`='George', `last_name`='Bush' WHERE `id`='9090';
