@@ -11,7 +11,7 @@ UPDATE `contact` SET `title`='Mrs', `first_name`='Jane', `last_name`='Seymor' WH
 UPDATE `contact` SET `title`='Mr', `first_name`='Charles', `last_name`='Darwin' WHERE `id`='9690';
 UPDATE `contact` SET `last_name`='Windsor', `maiden_name`='Mountbatten' WHERE `id`='9883';
 UPDATE `contact` SET `first_name`='Karl', `last_name`='Marx' WHERE `id`='9691';
-UPDATE `contact` SET `title`='Mr', `first_name`='Martin', `last_name`='Luther' WHERE `id`='104763';
+UPDATE `contact` SET `title`='Mr', `first_name`='Martin', `last_name`='Luther King' WHERE `id`='104763';
 UPDATE `contact` SET `title`='Mr', `first_name`='Cristopher', `last_name`='Columbus' WHERE `id`='111963';
 UPDATE `contact` SET `first_name`='Isaac', `last_name`='Newton' WHERE `id`='118685';
 UPDATE `contact` SET `first_name`='Theodore', `last_name`='Roosevelt' WHERE `id`='121690';
