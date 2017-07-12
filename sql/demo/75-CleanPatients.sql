@@ -9,7 +9,7 @@ UPDATE `contact` SET `title`='Mr', `first_name`='Henry', `last_name`='Tudor' WHE
 UPDATE `contact` SET `first_name`='Anne', `last_name`='Boleyn' WHERE `id`='9498';
 UPDATE `contact` SET `title`='Mrs', `first_name`='Jane', `last_name`='Seymor' WHERE `id`='9499';
 UPDATE `contact` SET `title`='Mr', `first_name`='Charles', `last_name`='Darwin' WHERE `id`='9690';
-UPDATE `contact` SET `last_name`='Windsor', `maiden_name`='Mountbatten' WHERE `id`='9883';
+UPDATE `contact` SET `first_name`='Marie', `last_name`='Curie' WHERE `id`='9883';
 UPDATE `contact` SET `first_name`='Karl', `last_name`='Marx' WHERE `id`='9691';
 UPDATE `contact` SET `title`='Mr', `first_name`='Martin', `last_name`='Luther King' WHERE `id`='104763';
 UPDATE `contact` SET `title`='Mr', `first_name`='Cristopher', `last_name`='Columbus' WHERE `id`='111963';
@@ -100,7 +100,7 @@ UPDATE `contact` SET `title`='Mrs', `first_name`='Harriet', `last_name`='Beecher
 UPDATE `contact` SET `title`='Ms', `first_name`='Mae', `last_name`='West' WHERE `id`='9161';
 UPDATE `contact` SET `first_name`='Agatha', `last_name`='Christie' WHERE `id`='9162';
 UPDATE `contact` SET `title`='Miss', `first_name`='Marie', `last_name`='Antoinette' WHERE `id`='9163';
-UPDATE `contact` SET `title`='Mdme', `first_name`='Marie', `last_name`='Curie' WHERE `id`='9164';
+UPDATE `contact` SET `title`='Mdme', `first_name`='Elizabeth', `last_name`='Windsor' WHERE `id`='9164';
 UPDATE `contact` SET `first_name`='Emily', `last_name`='Murphy' WHERE `id`='9165';
 UPDATE `contact` SET `first_name`='Zsa Zsa', `last_name`='Gabor' WHERE `id`='9166';
 UPDATE `contact` SET `title`='Miss', `first_name`='Bette Davis' WHERE `id`='9167';
