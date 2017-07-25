@@ -11,6 +11,8 @@ INSERT INTO `worklist_definition` (`id`,`name`,`description`,`worklist_name`,`rr
 INSERT INTO `worklist_definition` (`id`,`name`,`description`,`worklist_name`,`rrule`,`start_time`,`end_time`,`active_from`,`active_until`,`scheduled`,`display_order`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`) VALUES (3,'Glaucoma Demo Patients','Patients for Glaucoma demos',NULL,'FREQ=DAILY','08:00:00','17:00:00','2099-05-09 11:47:51',NULL,0,0,1,'2017-05-09 11:48:18',1,'2017-05-09 11:47:51');
 INSERT INTO `worklist_definition` (`id`,`name`,`description`,`worklist_name`,`rrule`,`start_time`,`end_time`,`active_from`,`active_until`,`scheduled`,`display_order`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`) VALUES (4,'Blank Demo Patients','Empty patient records for demos',NULL,'FREQ=DAILY','08:00:00','17:00:00','2099-05-09 11:47:51',NULL,0,0,1,'2017-05-09 11:48:18',1,'2017-05-09 11:47:51');
 INSERT INTO `worklist_definition` (`id`,`name`,`description`,`worklist_name`,`rrule`,`start_time`,`end_time`,`active_from`,`active_until`,`scheduled`,`display_order`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`) VALUES (5,'Vitreoretinal Demo Patients','Patients for Vitreoretinal demos',NULL,'FREQ=DAILY','08:00:00','17:00:00','2099-05-09 11:47:51',NULL,0,0,1,'2017-05-09 11:48:18',1,'2017-05-09 11:47:51');
+INSERT INTO `worklist_definition` (`id`,`name`,`description`,`worklist_name`,`rrule`,`start_time`,`end_time`,`active_from`,`active_until`,`scheduled`,`display_order`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`) VALUES (6,'Paediatric Demo Patients','Patients for Paediatric demos',NULL,'FREQ=DAILY','08:00:00','17:00:00','2099-05-09 11:47:51',NULL,0,0,1,'2017-05-09 11:48:18',1,'2017-05-09 11:47:51');
+
 
 /*Create Worklist instances*/
 INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (1,'Cataract Demo Patients','Patients for cataract demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:58:42',1,'2017-05-09 12:58:42',1);
@@ -18,6 +20,7 @@ INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`las
 INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (3,'Glaucoma Demo Patients','Patients for Glaucoma demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:59:10',1,'2017-05-09 12:59:10',3);
 INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (4,'Blank Demo Patients','Empty patient records for demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:59:10',1,'2017-05-09 12:59:10',4);
 INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (5,'Vitreoretinal Demo Patients','Patients for Vitreoretinal demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:59:10',1,'2017-05-09 12:59:10',5);
+INSERT INTO `worklist` (`id`,`name`,`description`,`start`,`end`,`scheduled`,`last_modified_user_id`,`last_modified_date`,`created_user_id`,`created_date`,`worklist_definition_id`) VALUES (6,'Paediatric Demo Patients','Patients for Paediatric demos','2049-05-09 00:00:00','2017-05-09 17:00:00',1,1,'2017-05-09 12:59:10',1,'2017-05-09 12:59:10',6);
 
 /* Add Cataract Patients */
 Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 1, id from patient p where p.hos_num
@@ -48,7 +51,8 @@ Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 2, id fro
 Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 3, id from patient p where p.hos_num
 	in (
     '1009797',
-	'0755231'
+	'0755231',
+	'1009068'
     );
 
 /* Add Empty patients */
@@ -64,10 +68,23 @@ Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 4, id fro
     '1932578'
     );
 
+/* Add Paeds patients */
+	Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 6, id from patient p where p.hos_num
+	in (
+	'1009091'
+	);
+
 
 /* SET Order */
+-- Cataract
 UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:00' WHERE `id`='6';
 UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:05' WHERE `id`='7';
 UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:10' WHERE `id`='3';
 UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:15' WHERE `id`='5';
 UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:20' WHERE `id`='4';
+UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:45:00' WHERE `id`='1';
+UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 10:15:10' WHERE `id`='2';
+-- Glaucoma
+UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:00' WHERE `id`='24';
+UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:15:00' WHERE `id`='25';
+UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:30:00' WHERE `id`='23';

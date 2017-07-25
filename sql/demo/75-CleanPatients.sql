@@ -121,7 +121,8 @@ UPDATE `contact` SET `title`='Mrs', `first_name`='Julie', `last_name`='Andrews' 
 UPDATE `contact` SET `title`='Mr', `first_name`='Enoch', `last_name`='Powell' WHERE `id`='9185';
 UPDATE `contact` SET `title`='Mr', `first_name`='Alexanger Graham', `last_name`='Bell' WHERE `id`='9186';
 
-
+/* Adjust DOB for Paeds, etc */
+UPDATE `openeyes`.`patient` SET `dob`='2010-02-24' WHERE `id`='19061';
 
 
 -- Sync patient and contact names
