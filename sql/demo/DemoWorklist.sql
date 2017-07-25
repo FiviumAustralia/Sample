@@ -63,3 +63,11 @@ Insert INTO openeyes.worklist_patient (worklist_id, patient_id) SELECT 4, id fro
 	in (
     '1932578'
     );
+
+
+/* SET Order */
+UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:00' WHERE `id`='6';
+UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:05' WHERE `id`='7';
+UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:10' WHERE `id`='3';
+UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:15' WHERE `id`='5';
+UPDATE `openeyes`.`worklist_patient` SET `when`='0000-00-00 09:00:20' WHERE `id`='4';
